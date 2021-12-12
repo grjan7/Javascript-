@@ -211,6 +211,7 @@ function CRUD(idsArray, dataset, className, targetID) {
   this.setEventListeners = () => {
 
     Qs(`.${this.className} > input[type=checkbox]`).forEach((el) => {
+	    
       let isChecked = false;
       el.parentElement.style.backgroundColor = "inherit";
       
@@ -218,7 +219,7 @@ function CRUD(idsArray, dataset, className, targetID) {
       el.onclick = () => {
         isChecked = !isChecked;
         el.parentElement.lastElementChild.style.display = isChecked ? "block" : "none";
-				el.parentElement.style.backgroundColor = isChecked ? "#f0f0f0": "inherit";
+	el.parentElement.style.backgroundColor = isChecked ? "#f0f0f0": "inherit";
         
         //toggling of contenteditable property of span element if the item is selected
         el.parentElement.childNodes.forEach((span) => {
