@@ -261,7 +261,9 @@ function CRUD(idsArray, dataset, className, targetID) {
 	      
         let oldData = this.pullData(el);
         el.parentElement.lastElementChild.childNodes.forEach((inp) => {
-          //setting onclick eventListener for update button         
+		
+          //setting onclick eventListener for update button
+		
           if (inp.className == "update") {
             inp.onclick = () => {
               let newData = this.pullData(el);
